@@ -1,5 +1,11 @@
 package fluffybunny.malbunny.utils;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,7 +20,14 @@ public class UtilityBunny {
 	//public static final String[] scrGuideStr = {50,100,200,500,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000};
 	
 	public static ChromeDriver newChrome() {
-		System.setProperty("webdriver.chrome.driver","C:/Users/firco/Dropbox/bunnytest3/src/main/webapp/resources/chromedriver.exe");
+		try {
+			InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream("chromedriver.exe");
+			Files.copy(is, new File("/tmp/chromedriver.exe").toPath());
+			System.setProperty("webdriver.chrome.driver","/tmp/chromedriver.exe");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		ChromeOptions options = new ChromeOptions();
 		//options.addArguments("load-extension=C:\\Users\\firco\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\cjpalhdlnbpafiamejdnhcphjbkeiagm\\1.16.4_0");
 		//DesiredCapabilities capabilities = new DesiredCapabilities();

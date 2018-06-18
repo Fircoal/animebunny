@@ -50,8 +50,6 @@ public class BunnyService {
 	private MalBunnyUser activeUser = null;
 
 	public void getUserDetails(String username) {
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\firco\\Downloads\\Music VSTs + Plugins\\chromedriver.exe");
 		// Initialize browser
 		WebDriver driver = UtilityBunny.newChrome();
 
