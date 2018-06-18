@@ -47,7 +47,8 @@ public class HibernateConf {
     	System.out.println("Data Source");
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/animu");
+        //dataSource.setUrl("jdbc:postgresql://localhost:5432/animu");
+        dataSource.setUrl("jdbc:postgresql-cylindrical-60883");
         dataSource.setUsername("postgres");
         dataSource.setPassword("root");
 
