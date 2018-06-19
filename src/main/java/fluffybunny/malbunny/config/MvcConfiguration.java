@@ -1,6 +1,14 @@
 package fluffybunny.malbunny.config;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.nio.file.Files;
+import java.util.Enumeration;
 import java.util.concurrent.Executor;
+
+import javax.annotation.PostConstruct;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -44,6 +52,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter{
     	System.out.println("Resource Handler");
 		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
 	}
+	
 
 /*	@Bean
 	public MessageSource messageSource() {
