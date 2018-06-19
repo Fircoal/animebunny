@@ -24,26 +24,12 @@ public class UtilityBunny {
 	//public static final String[] scrGuideStr = {50,100,200,500,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000};
 	
 	public static WebDriver newChrome() {
-		/*try {
-			System.out.println(new File("chromedriver.exe").getAbsolutePath());
-			System.out.println(ResourceUtils.CLASSPATH_URL_PREFIX);
-			System.out.println(ResourceUtils.FILE_URL_PREFIX);
-			System.out.println(ResourceUtils.getFile("classpath:chromedriver.exe").getAbsolutePath());
-			InputStream is =  new ClassPathResource("/malbunny/src/main/webapp/resources/chromedriver.exe").getInputStream();
-			System.out.println(is.available());
-			Files.copy(is, new File("/tmp/chromedriver.exe").toPath());
-			System.setProperty("webdriver.chrome.driver","/tmp/chromedriver.exe");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
-		//ChromeOptions options = new ChromeOptions();
+		System.setProperty("webdriver.chrome.driver","/app/.apt/usr/bin/google-chrome/chromedriver.exe");
+		ChromeOptions options = new ChromeOptions();
 		//options.addArguments("load-extension=C:\\Users\\firco\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\cjpalhdlnbpafiamejdnhcphjbkeiagm\\1.16.4_0");
 		//DesiredCapabilities capabilities = new DesiredCapabilities();
 		//capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-		//ChromeDriver driver = new ChromeDriver(options);
-		WebDriver driver;
-        WebDriverManager.chromedriver().setup();
+		ChromeDriver driver = new ChromeDriver(options);
         driver = new ChromeDriver();
 		driver.get("https://myanimelist.net/login.php");
 
