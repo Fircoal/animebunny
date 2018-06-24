@@ -48,10 +48,10 @@ public class HibernateConf {
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName("org.postgresql.Driver");
         //dataSource.setUrl("jdbc:postgresql://localhost:5432/animu");
-        dataSource.setUrl("jdbc:postgresql://ec2-54-225-96-191.compute-1.amazonaws.com:5432/dbi15v8a2cgoj8?user=ntjmgwwwxddnfp&password=f3d1e73355ea42065fde087aa9027f0ae044fff7bb7ead530dbbfbe470f4d95e&sslmode=require");
+        dataSource.setUrl("jdbc:postgresql://animebunnydb.cbd3nsrkhe6w.us-west-1.rds.amazonaws.com:5432/animebunnydb");
         //dataSource.setUrl("#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }\");
-        dataSource.setUsername("postgres");
-        dataSource.setPassword("root");
+        dataSource.setUsername("animebunny");
+        dataSource.setPassword("dachibunny");
 
         
    /*     dataSource.setDriverClassName("com.mysql.jdbc.Driver");

@@ -1,19 +1,9 @@
 package fluffybunny.malbunny.utils;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.util.ResourceUtils;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UtilityBunny {
 	
@@ -23,14 +13,13 @@ public class UtilityBunny {
 	public static final int[] srcGuide = {50,100,200,500,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000};
 	//public static final String[] scrGuideStr = {50,100,200,500,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000};
 	
-	public static WebDriver newChrome() {
-		System.setProperty("webdriver.chrome.driver","/app/.apt/usr/bin/google-chrome/chromedriver.exe");
+	public static ChromeDriver newChrome() {
+		System.setProperty("webdriver.chrome.driver","C:/Users/firco/Dropbox/bunnytest3/src/main/webapp/resources/chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		//options.addArguments("load-extension=C:\\Users\\firco\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\cjpalhdlnbpafiamejdnhcphjbkeiagm\\1.16.4_0");
 		//DesiredCapabilities capabilities = new DesiredCapabilities();
 		//capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 		ChromeDriver driver = new ChromeDriver(options);
-        driver = new ChromeDriver();
 		driver.get("https://myanimelist.net/login.php");
 
 		try {
