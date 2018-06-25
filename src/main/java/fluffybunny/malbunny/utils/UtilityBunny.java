@@ -14,7 +14,8 @@ public class UtilityBunny {
 	//public static final String[] scrGuideStr = {50,100,200,500,1000,2000,3000,4000,5000,6000,7000,8000,9000,10000,11000};
 	
 	public static ChromeDriver newChrome() {
-		System.setProperty("webdriver.chrome.driver","C:/Users/firco/Dropbox/bunnytest3/src/main/webapp/resources/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver","C:/Users/firco/Dropbox/bunnytest3/src/main/webapp/resources/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:/Users/Administrator/Downloads/chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
 		//options.addArguments("load-extension=C:\\Users\\firco\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Extensions\\cjpalhdlnbpafiamejdnhcphjbkeiagm\\1.16.4_0");
 		//DesiredCapabilities capabilities = new DesiredCapabilities();
